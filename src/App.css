@@ -1,0 +1,110 @@
+body {
+  direction: rtl;
+  background-color: #e6f7ff; /* צבע רקע רגוע */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse; /* הופך את הסדר כדי שהטופס יהיה מימין והמפה משמאל */
+  align-items: flex-start;
+  justify-content: space-between; /* יוצר רווח שווה בין הטופס למפה */
+  margin: 20px;
+}
+
+.form-container {
+  width: 400px; /* רוחב ברירת מחדל של הטופס */
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease;
+}
+
+.form-container:hover {
+  transform: scale(1.05); /* הגדלה קלה במעבר עכבר */
+  width: 420px; /* הרחבה קלה */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="checkbox"] {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  background-color: #f0faff;
+  border-color: #0077b6;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.5);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  font-style: italic;
+}
+
+button {
+  padding: 12px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #005f87;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.map-container {
+  width: 600px; /* התאמת רוחב המפה לטופס */
+  height: 500px; /* גובה מתון יותר */
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-right: 20px; /* רווח בין המפה לטופס */
+}
+
+.map-container:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
